@@ -1,0 +1,33 @@
+<h1><%= @pokemons.name %></h1>
+
+<p>Height: <%= @pokemons.height %></p>
+<p>Weight: <%= @pokemons.weight %></p>
+<p>Species: <%= @pokemons.species %></p>
+
+<% if @stat %>
+  <h2>Base Stats</h2>
+  <p>HP: <%= @stat.hp %></p>
+  <p>Attack: <%= @stat.attack %></p>
+  <p>Defense: <%= @stat.defense %></p>
+  <p>Special Attack: <%= @stat.special_attack %></p>
+  <p>Special Defense: <%= @stat.special_defense %></p>
+  <p>Speed: <%= @stat.speed %></p>
+<% end %>
+
+<% if @types.any? %>
+  <h2>Types</h2>
+  <ul>
+    <% @types.each do |type| %>
+      <li><%= type.name %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @abilities.any? %>
+  <h2>Abilities</h2>
+  <ul>
+    <% @abilities.each do |ability| %>
+      <li><%= ability.name %></li>
+    <% end %>
+  </ul>
+<% end %>
