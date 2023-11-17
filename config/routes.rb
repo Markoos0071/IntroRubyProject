@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   root "pokemons#index"
   get "/pokemon", to: "pokemons#index"
   get "/pokemon/:id", to: "pokemons#show"
+  resources :types, only: [:show]
+  resources :abilities, only: [:show]
 end

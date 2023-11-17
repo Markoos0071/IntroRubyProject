@@ -18,7 +18,11 @@
   <h2>Types</h2>
   <ul>
     <% @types.each do |type| %>
-      <li><%= type.name %></li>
+      <li>
+      <a href="/types/<%= type.id %>">
+        <%= type.name %>
+      </a>
+      </li>
     <% end %>
   </ul>
 <% end %>
@@ -27,7 +31,11 @@
   <h2>Abilities</h2>
   <ul>
     <% @abilities.each do |ability| %>
-      <li><%= ability.name %></li>
+      <li>
+      <a href="/abilities/<%= ability.id %>">
+        <%= ability.name %>
+      </a>
+      </li>
     <% end %>
   </ul>
 <% end %>
