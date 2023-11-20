@@ -11,6 +11,25 @@
   </head>
 
   <body>
+    <nav class="navbar">
+      <a class="navbar-name" href="/">Pokemon On Rails</a>
+      <div>
+        <ul class="navbar-items">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
+        <form>
+          <input type="text" placeholder="Search">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
     <%= yield %>
+
   </body>
 </html>
