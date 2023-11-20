@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   get "/about", to: "about#index"
   resources :types, only: [:show]
   resources :abilities, only: [:show]
+  resources :pokemons do
+    collection do
+      get 'reset_search'
+    end
+  end
 end

@@ -1,5 +1,13 @@
 <h1>Pokemon</h1>
 
+<%= form_tag(pokemon_path, method: "get") do %>
+<%= text_field_tag :name, params[:name], placeholder: "Search by name" %>
+  <%= select_tag :type_id, options_from_collection_for_select(Type.all, :id, :name, params[:type_id]), include_blank: true %>
+  <%= select_tag :ability_id, options_from_collection_for_select(Ability.all, :id, :name, params[:ability_id]), include_blank: true %>
+  <%= submit_tag "Search" %>
+  <%= submit_tag "Reset", formaction: reset_search_pokemons_path %>
+<% end %>
+
 <ul>
   <% @pokemons.each do |pokemon| %>
     <li>
