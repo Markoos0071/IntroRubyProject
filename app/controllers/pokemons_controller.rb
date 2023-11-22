@@ -1,6 +1,9 @@
 class PokemonsController < ApplicationController
   def index
-    @pokemons = Pokemon.all
+    pokemons = Pokemon.all
+
+    @pokemons = pokemons.page(params[:page]).per(15)
+
 
     if params[:type_id].present?
       @pokemons = @pokemons.joins(:types).where(types: { id: params[:type_id] })
@@ -13,6 +16,8 @@ class PokemonsController < ApplicationController
     if params[:name].present?
       @pokemons = @pokemons.where("lower(pokemons.name) LIKE ?", "%#{params[:name].downcase}%")
     end
+
+
 
   end
 

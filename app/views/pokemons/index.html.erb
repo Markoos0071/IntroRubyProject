@@ -8,6 +8,10 @@
   <%= submit_tag "Reset", formaction: reset_search_pokemons_path %>
 <% end %>
 
+<div>
+  <%= paginate @pokemons %>
+</div>
+
 <ul>
   <% @pokemons.each do |pokemon| %>
     <li>
