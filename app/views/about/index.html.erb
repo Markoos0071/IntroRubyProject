@@ -2,11 +2,18 @@
 <div class="container">
   <div class="dataset">
     <h2 class="dataset-name">Pokemon</h2>
-    <p class="dataset-description"></p>
+    <p class="dataset-description">All of the data used on this site comes from multiple different endpoints from the PokemonAPI.
+                                  The first endpoint that was used grabbed a list of the first 151 Pokemon, this was done to specify how many
+                                  entries would be put into the database. This endpoint was not used to put data into the database but instead it was
+                                  used to gether the urls for the other endpoints that would be used for the data collection.</p>
   </div>
   <div class="dataset">
     <h2 class="dataset-name">Individual Pokemon</h2>
-    <p class="dataset-description"></p>
+    <p class="dataset-description">Majority of the data for the database comes from these endpoints. They are accessed by using all of the
+                                  url's that were retrieved from the previous endpoint, meaning when this data was gathered it iterated through
+                                  all of the previous url's collecting the data needed. This data Was used for the Pokemon, Type, and Ability
+                                  tables. The data gathered was the name data for the Type and Ability tables, while also getting the name, weight, and height
+                                  for the Pokemon table.</p>
   </div>
   <div class="dataset">
     <h2 class="dataset-name">Pokemon Species</h2>
